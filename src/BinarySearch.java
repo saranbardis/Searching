@@ -15,11 +15,11 @@ public class BinarySearch {
 		long before2 = System.currentTimeMillis();
 		int result2 = SearchRec(F, k, 0, F.length - 1);
 		long after2 = System.currentTimeMillis();
-		double durationMS2 = after - before;
+		double durationMS2 = after2 - before2;
 
-		System.out.println("time2: " + durationMS + " ms");
+		System.out.println("time2: " + durationMS2 + " ms");
 
-		System.out.println(result + " " + result2);
+		System.out.println((result + 1) + " " + (result2 + 1));
 	}
 
 	public static int Search(int[] F, int k) {

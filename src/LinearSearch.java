@@ -11,7 +11,15 @@ public class LinearSearch {
 		double durationMS = after - before;
 
 		System.out.println("time: " + durationMS + " ms");
-		System.out.println(result);
+
+		long before2 = System.currentTimeMillis();
+		int result2 = SearchRec(F, k, 0);
+		long after2 = System.currentTimeMillis();
+		double durationMS2 = after2 - before2;
+
+		System.out.println("time2: " + durationMS2 + " ms");
+
+		System.out.println((result + 1) + " " + (result2 + 1));
 	}
 
 	public static int Search(int[] F, int k) {
@@ -20,6 +28,14 @@ public class LinearSearch {
 				return i;
 			}
 		}
+		return -1;
+	}
+
+	public static int SearchRec(int[] F, int k, int startingIndex) {
+		if (k == F[startingIndex])
+			return startingIndex;
+		if (startingIndex + 1 < F.length)
+			return SearchRec(F, k, startingIndex + 1);
 		return -1;
 	}
 }
