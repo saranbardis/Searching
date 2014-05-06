@@ -10,14 +10,14 @@ public class BinarySearch {
 		long after = System.currentTimeMillis();
 		double durationMS = after - before;
 
-		System.out.println("Zeit: " + durationMS + " ms");
+		System.out.println("time: " + durationMS + " ms");
 
 		long before2 = System.currentTimeMillis();
 		int result2 = SearchRec(F, k, 0, F.length - 1);
 		long after2 = System.currentTimeMillis();
 		double durationMS2 = after - before;
 
-		System.out.println("Zeit2: " + durationMS + " ms");
+		System.out.println("time2: " + durationMS + " ms");
 
 		System.out.println(result + " " + result2);
 	}

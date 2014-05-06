@@ -10,7 +10,7 @@ public class LinearSearch {
 		long after = System.currentTimeMillis();
 		double durationMS = after - before;
 
-		System.out.println("Zeit: " + durationMS + " ms");
+		System.out.println("time: " + durationMS + " ms");
 		System.out.println(result);
 	}
 
