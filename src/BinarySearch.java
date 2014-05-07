@@ -1,51 +1,110 @@
+import java.util.Random;
+
 public class BinarySearch {
 
 	public static void main(String[] args) {
 
-		int[] F = { 2, 4, 5, 6, 7, 8, 9, 11 };
-		int k = 5;
+		Random rand = new Random();
 
-		long before = System.currentTimeMillis();
-		int result = Search(F, k);
-		long after = System.currentTimeMillis();
-		double durationMS = after - before;
+		int[] testarray = new int[20]; // create test array
 
-		System.out.println("time: " + durationMS + " ms");
+		int randomFact = rand.nextInt(10) + 1; // randomize a number that we use
+												// as a factor for the array
+												// elements
 
-		long before2 = System.currentTimeMillis();
-		int result2 = SearchRec(F, k, 0, F.length - 1);
-		long after2 = System.currentTimeMillis();
-		double durationMS2 = after2 - before2;
+		for (int i = 0; i < testarray.length; i++) {
+			int randomInt = i * randomFact; // create the random number
+			testarray[i] = randomInt; // the array is sorted
+		}
 
-		System.out.println("time2: " + durationMS2 + " ms");
+		int randomIndex = rand.nextInt(20);
 
-		System.out.println((result + 1) + " " + (result2 + 1));
+		int element = testarray[randomIndex]; // pick a random element as our
+												// wanted element
+
+		String stringList = "";
+		for (int i = 0; i < testarray.length; i++)
+			stringList += testarray[i] + " ";
+		System.out.println("The list is: " + stringList + " Our element is: "
+				+ element); // print out our test array
+
+		long startTime = System.nanoTime();
+
+		int status = SearchRec(testarray, element, 0, testarray.length - 1);
+
+		long endTime = System.nanoTime();
+
+		long duration = (endTime - startTime);
+		double seconds = (double) (duration / 1000000000.0); // measure the time
+																// of the
+																// recursive
+																// algorithm
+
+		long startTime2 = System.nanoTime();
+
+		int status2 = Search(testarray, element);
+
+		long endTime2 = System.nanoTime();
+
+		long duration2 = (endTime - startTime);
+		double seconds2 = (double) (duration / 1000000000.0); // measure the
+																// time of the
+																// iterative
+																// algorithm
+
+		String output = "(Recursive) The Position of the element in the Array is: "
+				+ (status + 1)
+				+ ". \r\nThis was computed in "
+				+ seconds
+				+ " seconds. \r\n"
+				+ "(Iterative) The Position of the element in the Array is: "
+				+ (status + 1)
+				+ ". \r\nThis was computed in "
+				+ seconds2
+				+ " seconds. \r\n";
+
+		System.out.println(output); // print out the result
 	}
 
-	public static int Search(int[] F, int k) {
-		int down = 0;
-		int up = F.length - 1;
-		int middle;
-		while (down <= up) {
-			middle = (down + up) / 2;
-			if (F[middle] == k)
-				return middle;
-			else if (k < F[middle])
-				up = middle - 1;
+	public static int Search(int[] array, int element) {
+
+		int low = 0;
+		int high = array.length - 1;
+		int mid;
+
+		while (low <= high) {
+
+			mid = (int) Math.floor((low + high) / 2); // split the array in half
+
+			if (array[mid] == element) // we found the element
+				return mid;
+
+			else if (element < array[mid]) // if the element is in the lower
+											// half
+				high = mid - 1; // continue with the lower half
+
 			else
-				down = middle + 1;
+				low = mid + 1; // otherwise continue with the upper half
 		}
 		return -1;
 	}
 
-	public static int SearchRec(int[] F, int k, int down, int up) {
-		int middle = (down + up) / 2;
-		if (F[middle] == k)
-			return middle;
-		if (down == up)
+	public static int SearchRec(int[] array, int element, int low, int high) {
+
+		int mid = (int) Math.floor((low + high) / 2); // split the array in half
+
+		if (array[mid] == element) // we found the element
+			return mid;
+
+		if (low == high) // element not found
 			return -1;
-		if (F[middle] > k)
-			return SearchRec(F, k, down, middle - 1);
-		return SearchRec(F, k, middle + 1, up);
+
+		if (array[mid] > element) // if it is in the upper half
+			return SearchRec(array, element, low, mid - 1); // continue with the
+															// upper half
+
+		return SearchRec(array, element, mid + 1, high); // otherwise continue
+															// with the lower
+															// half
 	}
 }
