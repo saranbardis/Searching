@@ -1,6 +1,9 @@
 MyProjects
 ==========
 
-My Java Projects
+Here is my collection of searching algorithms. 
 
-My personal collection of java projects (finished / unfinished).
+Currently implemented:
+
+- Binary Search
+- Linear (Brute Force)
