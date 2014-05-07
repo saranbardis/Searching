@@ -46,8 +46,8 @@ public class BinarySearch {
 
 		long endTime2 = System.nanoTime();
 
-		long duration2 = (endTime - startTime);
-		double seconds2 = (double) (duration / 1000000000.0); // measure the
+		long duration2 = (endTime2 - startTime2);
+		double seconds2 = (double) (duration2 / 1000000000.0); // measure the
 																// time of the
 																// iterative
 																// algorithm
@@ -58,7 +58,7 @@ public class BinarySearch {
 				+ seconds
 				+ " seconds. \r\n"
 				+ "(Iterative) The Position of the element in the Array is: "
-				+ (status + 1)
+				+ (status2 + 1)
 				+ ". \r\nThis was computed in "
 				+ seconds2
 				+ " seconds. \r\n";
@@ -86,7 +86,7 @@ public class BinarySearch {
 			else
 				low = mid + 1; // otherwise continue with the upper half
 		}
-		return -1;
+		return -1; // element not found
 	}
 
 	public static int SearchRec(int[] array, int element, int low, int high) {
