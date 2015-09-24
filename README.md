@@ -1,4 +1,4 @@
-ALOGRATHIM- A vast Field
+ALOGRATHIM - A vast Field
 ==========
 Alograthim is related to many fields. It is a logical search to find answers accurately. This file is all about, how to search an Alogarthim? It directly deals with two thingss:
 
