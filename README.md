@@ -1,4 +1,4 @@
-![Title](https://eyeviewkamloops.files.wordpress.com/2014/10/algorithm.jpg)
+![Title](http://cbasaranoglu.com/wp-content/uploads/2014/10/algorithms_small_logo.png)
 
 
 ALGORITHM - A vast Field
