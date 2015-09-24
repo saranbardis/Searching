@@ -1,3 +1,6 @@
+![Title](https://eyeviewkamloops.files.wordpress.com/2014/10/algorithm.jpg)
+
+
 ALGORITHM - A vast Field
 ==========
 Searching Algorithm
