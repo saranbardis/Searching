@@ -9,4 +9,4 @@ Algorithm is a solution or an implementation of a law or mathematical solution. 
 How to perform Linear search (arrange from minimal to maximum)
 How to perform Binary search (It can be ordered forward or in a backward form)
 
-Read the complete solutions about algorathim at <a href="link">http://www.ervinkibrialaw.com/fairfax-possession-of-marijuana-attorney/</a>
+Read the complete solutions about algorathim at <a href="link">http://www.ervinkibrialaw.com/dc-dui-attorney/</a>
