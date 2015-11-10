@@ -1,4 +1,4 @@
-![Title](http://cbasaranoglu.com/wp-content/uploads/2014/10/algorithms_small_logo.png)
+![link](https://kintali.files.wordpress.com/2012/09/algorithms_small_logo.png?w=660)
 
 
 ALGORITHM - A vast Field
